@@ -7,10 +7,3 @@
 #   Character.create(name: "Luke", movie: movies.first)
 # creer utilisateurs
 # creer cone
-
-  User = user.create!(
-    first_name: ,
-    last_name: ,
-    email: ,
-    password:
-  )
