@@ -1,0 +1,2 @@
+class ConesController < ApplicationController
+end

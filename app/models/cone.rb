@@ -1,6 +1,6 @@
 class Cone < ApplicationRecord
   belongs_to :user
-  belongs_to :bookings
+  has_many :bookings
 
   validates :condition, presence: true
   validates :type, presence: true
