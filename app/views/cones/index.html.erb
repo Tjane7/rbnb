@@ -1,3 +1,5 @@
 <h1>All Cones</h1>
 <% @cones.each do |cone| %>
+  <div class="card p-3 m-3">
+    <%= link_to cone.name, cone %>
 <% end %>
