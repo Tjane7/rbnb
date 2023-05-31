@@ -1,0 +1,9 @@
+<h1>Post a cone for rent:</h1>
+<%= simple_form_for(@cone) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :condition %>
+  <%= f.input :quantity %>
+  <%= f.input :location %>
+  <%= f.submit %>
+<% end %>

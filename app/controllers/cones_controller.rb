@@ -14,9 +14,12 @@ class ConesController < ApplicationController
 
   def create
     @cone = Cone.new(cone_params)
+    @cone.user = current_user
     if @cone.save
       redirect_to cone_path(@cone)
+      # redirect_to @cone, notice: "Cone was successfully created."
     else
+      # raise
       render :new, status: :unprocessable_entity
     end
   end
