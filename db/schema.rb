@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_30_182534) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_31_155343) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -28,7 +28,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_30_182534) do
 
   create_table "cones", force: :cascade do |t|
     t.string "condition"
-    t.string "type"
     t.integer "quantity"
     t.string "location"
     t.bigint "user_id", null: false
