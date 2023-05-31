@@ -1,15 +1,48 @@
 class BookingsController < ApplicationController
 
-  def create
-  end
+  # how do a user acccept or reject booking ?
 
   def new
+   # @booking = Booking.new
+   @cone = Cone.find(params[:cone_id])
+   @booking = Booking.new
   end
 
+  def create
+    @booking = Booking.new(booking_params)
+    @cone = Cone.find(params[:cone_id])
+    @booking.cone = @cone
+    @booking.user = current_user
+    if @booking.save
+      redirect_to cone_path(@cone)
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
+
   def update
+    if @booking.update(booking_params)
+      redirect_to @booking, notice: " You successfully booked this cone !"
+    else
+      render :edit, status: :unprocessable_entity
+    end
   end
 
   def index
+    @bookings = Booking.all
+  end
+
+  private
+
+  # Only allow a list of trusted parameters through.
+
+  def set_booking
+    @booking = Booking.find(params[:id])
+  end
+
+  def booking_params
+    params.require(:booking).permit(:start_date, :end_date, :accepted)
   end
 
 end
