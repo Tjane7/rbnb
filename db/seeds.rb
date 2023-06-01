@@ -3,14 +3,31 @@ Booking.destroy_all
 Cone.destroy_all
 User.destroy_all
 
+user = User.create!(
+  email: "user@gmail.com",
+  password: 111111
+)
+puts "Created new generic user"
 
-3.times do
-  user = User.create!(
-    email: Faker::Internet.email,
-    password: 111111
-  )
-  puts "Created new user with id #{user.id}"
-end
+listing_user = User.create!(
+  email: "listing@gmail.com",
+  password: 111111
+)
+puts "Created new listing user"
+
+booking_user = User.create!(
+  email: "booking@gmail.com",
+  password: 111111
+)
+puts "Created new booking user"
+
+# 3.times do
+#   user = User.create!(
+#     email: Faker::Internet.email,
+#     password: 111111
+#   )
+#   puts "Created new user with id #{user.id}"
+# end
 
 10.times do
   cone = Cone.create!(
