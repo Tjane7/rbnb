@@ -26,6 +26,6 @@ class ConesController < ApplicationController
   private
 
   def cone_params
-    params.require(:cone).permit(:name, :description, :price, :condition, :quantity, :photo)
+    params.require(:cone).permit(:name, :description, :price, :condition, :quantity, :location, :photo)
   end
 end
