@@ -22,17 +22,16 @@ class BookingsController < ApplicationController
 
 
   def update
-    raise
     @booking = Booking.find(params[:id])
-    if booking.accepted = true
-      @booking.update(booking_params)
+    if @booking.update(booking_params)
+      redirect_to bookings_path
     else
-      booking.accepted = false
+      render :index, status: 422
     end
   end
 
   def index
-    @bookings = Booking.all
+    @bookings = current_user.owner_bookings
   end
 
   private

@@ -1,7 +1,7 @@
 puts "Cleaning the db..."
+Booking.destroy_all
 Cone.destroy_all
 User.destroy_all
-Booking.destroy_all
 
 
 3.times do
