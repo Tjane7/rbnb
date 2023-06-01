@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-
+  before_action :authenticate_user!
   # how do a user acccept or reject booking ?
 
   def new
