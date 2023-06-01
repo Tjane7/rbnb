@@ -2,6 +2,13 @@ class ConesController < ApplicationController
 
   def index
     @cones = Cone.all
+
+    @markers = @cones.geocoded.map do |cone|
+      {
+        lat: cone.latitude,
+        lng: cone.longitude
+      }
+    end
   end
 
   def show
