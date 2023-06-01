@@ -22,11 +22,12 @@ class ConesController < ApplicationController
       # raise
       render :new, status: :unprocessable_entity
     end
+    raise
   end
 
   private
 
   def cone_params
-    params.require(:cone).permit(:condition, :quantity, :location, :name, :description)
+    params.require(:cone).permit(:condition, :quantity, :price, :name, :description, :photo)
   end
 end
