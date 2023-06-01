@@ -2,5 +2,5 @@ class Cone < ApplicationRecord
   belongs_to :user
   has_many :bookings, dependent: :destroy
 
-  # validates :condition, :quantity, :name, :description, presence: true
+  # validates :condition, :quantity, :name, :description, :price, presence: true
 end
