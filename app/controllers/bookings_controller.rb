@@ -22,15 +22,16 @@ class BookingsController < ApplicationController
 
 
   def update
+    @booking = Booking.find(params[:id])
     if @booking.update(booking_params)
-      redirect_to @booking, notice: " You successfully booked this cone !"
+      redirect_to bookings_path
     else
-      render :edit, status: :unprocessable_entity
+      render :index, status: 422
     end
   end
 
   def index
-    @bookings = Booking.all
+    @bookings = current_user.owner_bookings
   end
 
   private
@@ -44,5 +45,4 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit(:start_date, :end_date, :accepted)
   end
-
 end

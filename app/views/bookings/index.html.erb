@@ -1,0 +1,9 @@
+<% @bookings.each do |booking|  %>
+  <h4> booking </h4>
+  <p><%= booking.cone.name %></p>
+  <p><%= booking.accepted %></p>
+  <%= simple_form_for(booking) do |f| %>
+    <%= f.input :accepted, as: :radio_buttons %>
+    <%= f.submit %>
+  <% end %>
+<% end %>
