@@ -1,10 +1,15 @@
-<h1>All cones</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)), url(https://res.cloudinary.com/dl7jrxyit/image/upload/v1685647290/montreal-construction-orange-cones_d95op4.webp
+);">
+  <div class="container">
+    <h1><center>All cones!</center></h1>
+  </div>
+</div>
 <p><%= link_to 'Create a cone', new_cone_path %></p>
 <div class="cones-grid">
   <% @cones.each do |cone| %>
     <div class="card">
       <% if cone.photo.attached? %>
-        <%= cl_image_tag cone.photo.key, height: 300, width: 400, crop: :fill %>
+        <%= cl_image_tag cone.photo.key, height: 100, width: 200, crop: :fill %>
       <% end %>
       <div class="card-body">
         <h5 class="card-title">
@@ -12,6 +17,7 @@
             <%= cone.description %>
           <% end %>
         </h5>
+
         <p class="card-text">Condition: <%= cone.condition %></p>
         <p class="card-text">Price: $<%= cone.price %></p>
 
