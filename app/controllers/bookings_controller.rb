@@ -22,10 +22,12 @@ class BookingsController < ApplicationController
 
 
   def update
-    if @booking.update(booking_params)
-      redirect_to @booking, notice: " You successfully booked this cone !"
+    raise
+    @booking = Booking.find(params[:id])
+    if booking.accepted = true
+      @booking.update(booking_params)
     else
-      render :edit, status: :unprocessable_entity
+      booking.accepted = false
     end
   end
 
@@ -44,5 +46,4 @@ class BookingsController < ApplicationController
   def booking_params
     params.require(:booking).permit(:start_date, :end_date, :accepted)
   end
-
 end
