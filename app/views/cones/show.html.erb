@@ -1,21 +1,20 @@
-<div class="container">
-  <div class="row">
-    <div class="col-12 col-lg-6">
-      <div class="card">
-        <h1><%= @cone.name %></h1>
-      </div>
-    </div>
-    <div class="col-12 col-lg-6">
-      <div class="card bg-light">
-
-      </div>
-    </div>
+<div class="card-product m-3">
+  <%= cl_image_tag @cone.photo.key %>
+  <div class="card-product-infos">
+    <h2><%= @cone.name %></h2>
+    <p><%= @cone.description %></p>
+    <p>Price: <%= @cone.price %></p>
+    <p>Condition: <%= @cone.condition %></p>
   </div>
 </div>
 
-
-<h2><%= @cone.description %></h2>
-<p>Condition: <%= @cone.condition %></p>
-<p>Quantity: <%= @cone.quantity %></p>
-<p>Price: <%= @cone.price %></p>
-<%= cl_image_tag @cone.photo.key, height: 300, width: 400, crop: :fill %>
+<!--<div class="card-trip">
+  <%= cl_image_tag @cone.photo.key %>
+  <div class="card-trip-infos">
+    <div>
+      <h2><%= @cone.name %></h2>
+      <p><%= @cone.description %></p>
+    </div>
+    <h2 class="card-trip-pricing"><%= @cone.price %></h2>
+  </div>
+</div>-->
