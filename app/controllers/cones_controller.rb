@@ -17,16 +17,15 @@ class ConesController < ApplicationController
     @cone.user = current_user
     if @cone.save
       redirect_to cone_path(@cone)
-      # redirect_to @cone, notice: "Cone was successfully created."
     else
-      # raise
       render :new, status: :unprocessable_entity
     end
+    # raise
   end
 
   private
 
   def cone_params
-    params.require(:cone).permit(:condition, :quantity, :location, :name, :description)
+    params.require(:cone).permit(:name, :description, :price, :condition, :quantity, :photo)
   end
 end
