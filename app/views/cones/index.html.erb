@@ -3,8 +3,9 @@
 <div class="cones-grid">
   <% @cones.each do |cone| %>
     <div class="card">
-      <img src="..." class="rounded-0" alt="..."
-      ="card-img-top" alt="...">
+      <% if cone.photo.attached? %>
+        <%= cl_image_tag cone.photo.key, height: 300, width: 400, crop: :fill %>
+      <% end %>
       <div class="card-body">
         <h5 class="card-title">
           <%= link_to cone_path(cone) do %>
