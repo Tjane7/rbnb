@@ -4,19 +4,19 @@ Cone.destroy_all
 User.destroy_all
 
 user = User.create!(
-  email: "user@gmail.com",
+  email: "user@hue.com",
   password: 111111
 )
 puts "Created new generic user"
 
 listing_user = User.create!(
-  email: "listing@gmail.com",
+  email: "listing@hue.com",
   password: 111111
 )
 puts "Created new listing user"
 
 booking_user = User.create!(
-  email: "booking@gmail.com",
+  email: "booking@hue.com",
   password: 111111
 )
 puts "Created new booking user"
