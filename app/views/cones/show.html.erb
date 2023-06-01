@@ -18,4 +18,6 @@
 <p>Condition: <%= @cone.condition %></p>
 <p>Quantity: <%= @cone.quantity %></p>
 <p>Price: <%= @cone.price %></p>
-<%= cl_image_tag @cone.photo.key, height: 300, width: 400, crop: :fill %>
+<% if @cone.photo.attached? %>
+  <%= cl_image_tag cone.photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>
