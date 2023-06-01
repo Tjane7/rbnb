@@ -1,14 +1,23 @@
-<h1>Cones for Rent</h1>
-<% @cones.each do |cone| %>
-  <p><%= cone.name %></p>
-  <p><%= cone.description %></p>
-<% end %>
+<h1>All cones</h1>
+<p><%= link_to 'Create a cone', new_cone_path %></p>
+<div class="cones-grid">
+  <% @cones.each do |cone| %>
+    <div class="card">
+      <img src="..." class="rounded-0" alt="..."
+      ="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">
+          <%= link_to cone_path(cone) do %>
+            <%= cone.description %>
+          <% end %>
+        </h5>
+        <p class="card-text">Condition: <%= cone.condition %></p>
+        <p class="card-text">Price: $<%= cone.price %></p>
 
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Cone name</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
+        <%= link_to cone_path(cone), class: "btn btn-primary" do %>
+          Details
+        <% end %>
+      </div>
+    </div>
+  <% end %>
 </div>
