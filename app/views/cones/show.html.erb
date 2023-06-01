@@ -1,6 +1,21 @@
-<h1><%= @cone.name %></h1>
+<div class="container">
+  <div class="row">
+    <div class="col-12 col-lg-6">
+      <div class="card">
+        <h1><%= @cone.name %></h1>
+      </div>
+    </div>
+    <div class="col-12 col-lg-6">
+      <div class="card bg-light">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <h2><%= @cone.description %></h2>
 <p>Condition: <%= @cone.condition %></p>
 <p>Quantity: <%= @cone.quantity %></p>
 <p>Price: <%= @cone.price %></p>
-<%# <%= cl_image_tag @article.photo.key, height: 300, width: 400, crop: :fill %>
+<%= cl_image_tag @cone.photo.key, height: 300, width: 400, crop: :fill %>
