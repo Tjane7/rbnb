@@ -1,6 +1,7 @@
 puts "Cleaning the db..."
 Cone.destroy_all
 User.destroy_all
+Booking.destroy_all
 
 
 3.times do
@@ -17,7 +18,7 @@ end
     description: Faker::Company.bs,
     condition: ["Used", "New"].sample,
     quantity: rand(0..15),
-    location: Faker::Address.city
+    price: Faker::Commerce.price
   )
   puts "Created new cone with id #{cone.id}"
 end
