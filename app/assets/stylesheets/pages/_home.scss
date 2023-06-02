@@ -1,8 +1,9 @@
 // Specific CSS for your home-page
-.banner {
-  background-size: cover;
-  background-position: center;
-  padding: 100px 0;
+.button{
+  color: white;
+  width: 200px;
+  height: 100px;
+  /*add any other properties you want to style*/
 }
 
 .banner h1 {
@@ -11,6 +12,27 @@
   text-shadow: 1px 1px 3px rgba(202, 164, 194, 0.694);
   font-size: 32px;
   font-weight: lighter;
+}
+
+.text-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.btn-banner {
+  color: #e7640d;
+    padding: 8px 24px;
+    border-radius: 4px;
+    background: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin: 0 500px;
+    text-decoration: none;
+    text-align: center;
+    &:hover{
+      text-decoration: none;
+    }
 }
 
 //.banner p {
@@ -31,6 +53,8 @@
 .card-category {
   width: 100%;
   padding: 50px;
+  background-size: cover;
+  background-position: center;
 }
 
 .card-category h2 {
@@ -45,6 +69,7 @@
   height: 100px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
+  font-style: bold;
 }
 .footer-links {
   display: flex;
@@ -59,14 +84,15 @@
 }
 .footer-links a:hover {
   opacity: 1;
+  font-size: larger;
+  font-style: oblique;
 }
 
 .home-content {
-margin: 100px
-
+  margin: 100px;
 }
 
 .home-content h1 {
   color: rgb(231, 100, 13);
-
+  font-style: oblique
   }
