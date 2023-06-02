@@ -4,9 +4,7 @@
       <div class="cone-show-card">
         <h1><%= @cone.name %></h1>
         <p><%= @cone.description %></p>
-      </div>
-      <div class="cone-show-card">
-        <div><img src="cone.png"></div>
+        <%= cl_image_tag @cone.photo.key %>
       </div>
     </div>
 
@@ -32,6 +30,7 @@
     </div>
   </div>
 </div>
+
 
 <div style="width: 100%; height: 600px;"
   data-controller="map"

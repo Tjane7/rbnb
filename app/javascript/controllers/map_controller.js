@@ -10,6 +10,7 @@ export default class extends Controller {
   }
 
   connect() {
+    console.log("hello from map controller")
     mapboxgl.accessToken = this.apiKeyValue
 
     // this.map == an instance variable
