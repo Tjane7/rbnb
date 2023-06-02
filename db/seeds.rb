@@ -41,7 +41,7 @@ puts "Created new cone with id #{cone1.id}"
 #----cone 2 -----#
 cone2 = Cone.create!(
   user: User.all.sample,
-  name: "Cone in combo with signalisation",
+  name: "Block the streets combo",
   description: "Comfuse everybody.",
   condition: "Used",
   quantity: rand(0..5),
@@ -122,15 +122,15 @@ cone5.photo.attach(io: file, filename: 'alot of cone.jpeg', content_type: 'image
 #   puts "Created new cone with id #{cone.id}"
 # end
 
-5.times do
-  booking = Booking.create!(
-    user: User.all.sample,
-    cone: Cone.all.sample,
-    accepted: Faker::Boolean.boolean,
-    start_date: Faker::Date.between(from: '2023-01-01', to: '2023-02-28'),
-    end_date: Faker::Date.between(from: '2023-03-01', to: '2023-05-28'),
-  )
-  puts "Created new booking with id #{booking.id}"
-end
+# 5.times do
+#   booking = Booking.create!(
+#     user: User.all.sample,
+#     cone: Cone.all.sample,
+#     accepted: Faker::Boolean.boolean,
+#     start_date: Faker::Date.between(from: '2023-01-01', to: '2023-02-28'),
+#     end_date: Faker::Date.between(from: '2023-03-01', to: '2023-05-28'),
+#   )
+#   puts "Created new booking with id #{booking.id}"
+# end
 
 puts "Ready!"
