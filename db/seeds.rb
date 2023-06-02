@@ -3,25 +3,114 @@ Booking.destroy_all
 Cone.destroy_all
 User.destroy_all
 
-
-user = User.create!(
+# ------------------------------
+# USER SEEDS
+User.create!(
   email: "user@hue.com",
   password: 111111
 )
 puts "Created new generic user"
 
-listing_user = User.create!(
+User.create!(
   email: "listing@hue.com",
   password: 111111
 )
 puts "Created new listing user"
 
-booking_user = User.create!(
+User.create!(
   email: "booking@hue.com",
   password: 111111
 )
 
 puts "Created new booking user"
+
+
+# ------------------------------
+# CONE SEEDS
+
+# Cone 1
+Cone.create!(
+      user: User.all.sample,
+      name: "Cone orange de New Jersey",
+      description: "This cone is authentic, bright orange, and super lovely.",
+      condition: ["Used", "New"].sample,
+      quantity: rand(0..10),
+      price: 50,
+      location: "26 Oxford Terrace, West Orange",
+      photo:
+    )
+    puts "Created new cone with id #{cone.id}"
+
+# Cone 2
+Cone.create!(
+  user: User.all.sample,
+  name: "Name here",
+  description: "This cone is authentic, bright orange, and super lovely.",
+  condition: ["Used", "New"].sample,
+  quantity: rand(0..10),
+  price: 50,
+  location: "26 Oxford Terrace, West Orange",
+  photo:
+)
+puts "Created new cone with id #{cone.id}"
+
+
+# Cone 3
+Cone.create!(
+  user: User.all.sample,
+  name: "Name here",
+  description: "This cone is authentic, bright orange, and super lovely.",
+  condition: ["Used", "New"].sample,
+  quantity: rand(0..10),
+  price: 50,
+  location: "26 Oxford Terrace, West Orange",
+  photo:
+)
+puts "Created new cone with id #{cone.id}"
+
+
+# Cone 4
+Cone.create!(
+  user: User.all.sample,
+  name: "Name here",
+  description: "This cone is authentic, bright orange, and super lovely.",
+  condition: ["Used", "New"].sample,
+  quantity: rand(0..10),
+  price: 50,
+  location: "26 Oxford Terrace, West Orange",
+  photo:
+)
+puts "Created new cone with id #{cone.id}"
+
+# Cone 5
+Cone.create!(
+  user: User.all.sample,
+  name: "Name here",
+  description: "This cone is authentic, bright orange, and super lovely.",
+  condition: ["Used", "New"].sample,
+  quantity: rand(0..10),
+  price: 50,
+  location: "26 Oxford Terrace, West Orange",
+  photo:
+)
+puts "Created new cone with id #{cone.id}"
+
+# Cone 6
+Cone.create!(
+  user: User.all.sample,
+  name: "Name here",
+  description: "This cone is authentic, bright orange, and super lovely.",
+  condition: ["Used", "New"].sample,
+  quantity: rand(0..10),
+  price: 50,
+  location: "26 Oxford Terrace, West Orange",
+  photo:
+)
+puts "Created new cone with id #{cone.id}"
+
+
+
+
 
 require "open-uri"
 cone_user = Cone.create!(
@@ -38,16 +127,8 @@ cone_user = Cone.create!(
 end
 
 
-# 10.times do
-#   cone = Cone.create!(
-#     user: User.all.sample,
-#     description: Faker::Company.bs,
-#     condition: ["Used", "New"].sample,
-#     quantity: rand(0..15),
-#     price: Faker::Commerce.price
-#   )
-#   puts "Created new cone with id #{cone.id}"
-# end
+# ------------------------------
+# BOOKING SEEDS
 
 5.times do
   booking = Booking.create!(
