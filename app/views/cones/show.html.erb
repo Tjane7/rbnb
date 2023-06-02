@@ -58,3 +58,11 @@
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"
 ></div>
+
+<!--<h2><%= @cone.description %></h2>
+<p>Condition: <%= @cone.condition %></p>
+<p>Quantity: <%= @cone.quantity %></p>
+<p>Price: <%= @cone.price %></p>
+<% if @cone.photo.attached? %>
+  <%= cl_image_tag cone.photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>-->
