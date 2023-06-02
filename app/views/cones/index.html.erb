@@ -1,8 +1,10 @@
 <body style="background-color:rgb(231, 100, 13)">
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)), url(https://res.cloudinary.com/dl7jrxyit/image/upload/v1685647290/montreal-construction-orange-cones_d95op4.webp
 );">
-  <h1>Choose your cone</h1>
-  <%= link_to 'Create a cone', new_cone_path, class: "btn btn-gradient" %>
+  <div class="container">
+    <h1><center>Choose your cone</center></h1>
+    <%= link_to 'Create a cone', new_cone_path, class: "btn btn-gradient"  %>
+  </div>
 </div>
 <%# <p><%= link_to 'Create a cone', new_cone_path, class: "btn btn-gradient"  %>
 <div class="cones-grid">

@@ -1,9 +1,10 @@
 <div class="banner" style="background-image: url(https://plus.unsplash.com/premium_photo-1675492008192-29bf809b9fa3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80);">
-  <div class="container">
+  <div class="container text-banner">
     <h1><center>Montrealify your hometown with Cone-oisseur !</center></h1>
-  <%= link_to "Book you're cone !", cones_path, class: "btn btn--flat " %>
+    <%=  link_to "See all our cone!", cones_path, class: "btn-banner" %>
   </div>
 </div>
+
 <div class="cards">
   <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAgVBMVEX///8AAADDw8OIiIj19fX8/Pyzs7MjIyOdnZ3T09MNDQ16enoiIiIEBAQeHh7v7+/g4ODMzMwZGRk9PT0SEhIXFxegoKBsbGwoKCja2trBwcHm5uYyMjKYmJjy8vIzMzNZWVmqqqp2dnaOjo5GRka4uLhSUlJjY2NKSkpAQEBnZ2dQKVfdAAAIZklEQVR4nO2cC3uiOhCGiRJRrkpBUfF+abf//weemSQooEIRQvfZM+/ZbmtICR+TTCaT7DEMgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAIgiAI4v/BclJmNuiA1fq3hSm2H0wTo9+Wppgw759XqAtS2Bf/nkJuHM7n89cIfhCYy+kjy2E3CvkT9EtURrtU13I6UcjsByLrPNQ8j6zAeYL7XFTXWnaj8OUlraY8i0YO1ZU6GJ4VCtlEp0DDOGzG45X4yXzFeteRQugtzqzIPIKLa71WVPA/7WXUKXw24LcpY2kfLscYaRWoFO6NshZubG0s74FZHwo3j+1yYwoXhvr7Ke9iSnhHIbQ8YLXzVTeYgXn8BYXAAS4ttVhx7jjOxlQfsAF9dqxSyA2MmgINAk+ibTfX0mn3UeYP62RFVWlDw/hk7KNzI3K8LT7+7F7ytN6iA4E1Cjnf1QZW7zCQjU/r6sX6FRoBXB13rA8YHBeLRb0X22tXaMjYd/b6cgOC4fdiMW7S5XnYg0JYxzEM31rDVai9LxabS0Rk1pB7igy4dBLO1drQQIfqm1UVfqgQHaPnsW2+dF39dD34UsG1m/BtLlsslG20pdgaKeQQoTodzBkXmOaHRf850K3vZwrFOlRTQmceRgK7U1VedO8aP7IhdCZcD2tYS93ueOhSoJWmu6SosGbG4wbWX+tcZnSp0Eo9P7KsgsLqsIVjgOqxXRcKt6vB4Nn0WlDY0vvsvNRN4zSv0KtLCBlfWHe/ran1A4Gi0eRx8gmWKmG6nM5aRjL2zrYiO3XtvEKPpUfnNd+xeq2fl5Z2VBmLU3Wtr9vTem7UXOLOThI7zQZiVa7tKceJ0cLlTOVNauaee+bGta0Xz/EUT7wPfxdGaei/qxAG8qbFkvGCr/aMN6jQOL615duufHQ5OPMD9NlgBdvhtzhJ7qYveJofL7T3A179jK/J9gxg2fKKi2rF9iOpMBIReOxHqtiX6iI/Fl8SvOyGbuhDZVv9gs3CbD7kJi+8u1riNoYUCr/qmgAhiVDohrHPvCT0QsvDYtu2UIHl2yFUiOWAS2IvYRbuUIQhs0LwHElsu0nMRhw9zZibpikn9p/z2SoGqM0hgv0sHxX6UWzZ8PB+EkU+FHsw1YGjjGDOCxl82Tjiwii0fObCNGhhZbC66/nwk2+POGcRzPgc+9y8kULwOi1sWLOqAMuxBD2NyyzPxa4ZgrESD5SC7wGJwgnBS1DOSFQCa8uOjAqtOIb6LkOFFvtyYLI4Oo3XY20kllPdZc+BTykV4qiKIwskgx9JsFgo8ywsBeu5QqGvFIbgZYTC0IZf8IVCN4pi9l5K5P2lMXSZ7X0Lhq8ebu2iVVw0FyqMQjcSjlLYsEohWjNTaCmFUOa674RKXgf5DTWSH4cljiwrxkcWnhGU+T74SSyOygpD149jUSmRv5JXaHIYylADXkHoNw4g2igcLRYLJ1suPnE8GM6EOOiEQtACoZeFPQ+9KCpMQGGCCkErfAATwUeGw1IohLkCLYsKRf8Gdb7fuKu2UKj65fqlQnhYGVpG2SdbFtjiz+0LLnu2V/wV/NuT3w/QS0GeBeMY+nrjdWgLhQd5BxWirjfjjNU0CKaXcR1zZAz/ib/kx/lYfhSXRZXxZtk8autIYSDv0MfWz/Nn99DI/vEwgwXNarzPSjpTyI31EJYt1cs2mKXB0W6D0uJ7OXs45Zcd9nvKSwN95jby+ejplno3ueIHSq18lyalbQfnbMBc52Wp2Qt7nJZ7UTjAovV8kdp2+j1fo2mXbywbywpFcmp7OX5Enr8/CSXm4+K7B4U+GnByvRdcsdFtWn6UplxwoOQ2Zl0xYJyyEXUr9FgUQHxf2mb7xoCo5Z4GnnMpxeHp8olE/TaEVoOk2CpM/MEPQvdK5mDBxcOSGmWXVnXaFc5v00ruQZjYmT60yMntQeD+frfbD5csWdabwh18+FCtH0ez2SVLQ6T8fuEN1oZIkCLXw2yyOoVK5bScuh3oUejl7n+STQ+zY5pD+b6HbTY9HBkmwgx/zSaii5zw8ZUWUiqa0uCZwlj1UY+t7hcHNzO87U+n8nc9fE8ZgUzO9XTgNouPN1lnurfL5cQs7NAgr1TgD5oQb5vL9XPluvCASCkk0qlwoobkZ/4iOkF8PP726VN4cWL+sYu595Fqk5eq6zhRlEUsJohAMYVNR67yyrO3Fw0zsSXKRHoqj6/kl6ZaHQpVEzvl2JJyG2IAwkTy5kZ/oHpkOQcjDjLtHxVqQDVxVY0uygrFnDE05Mmj5mQL7nKzYlGe9qJQ7Tl8imMSLO/xJEI3uJrvdxUKf5yUbyt0u30qvN61FBmq0jf34ZTCsHzbTHcPCpWnidSEcC1fF8o2tzfRlEB54fI25gELzw8OTIenOQ0FzlZN72axDenOV4bpDN/BWRsmw/m+HJGJF+cYvFS/e315TCFmXiw8KEu04Cz7RuHNrYXsXs4M31ErgKJfl9H/Q9dthHxJRTXXp11XO7KbprmXzT9UJ22DilvymZqhMOGDV9OPPPCX3MKaaSrCnLYHezdCD1qRiz/mIvNCvZOt5R2R+Vs6Kq05bevhUnmjq9jOXmdB/Lz29zQwui10Y7XrAE/WfpGTy4Jkk473GD31AOfKKxQox8xv3PfZyuRTx8m2n7Bi94y7+N6NR1/LVfAdzTPfa7gRFNKJ30EnfYmXDi58aP63elWPAl/TkzrjlAxrT/g3wJxnycOFpqRaE7aTwWDSvTM3l7PB7G/5Hy8g3f/zFvX9d1wMQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRAEQRDE38R/SgCECbzd4SMAAAAASUVORK5CYII=)">
     <h2><center>fast delivery</center></h2>
@@ -19,7 +20,9 @@
 </div>
 <div class="home-content">
 
-<h1><center>Need a bit of chaos in your city ?</center></h1>
+<h1><align>Need a bit of chaos in your city ?</align></h1>
+  <p><align>Moved away from Montreal? Desperately miss the atmosphere of your beloved city?
+  Cone-oisseur has the answer. Rent construction cones and place them on the street in your new city to recreate the feeling of walking the streets of Montreal!</align></p>
 
 
 </div>
@@ -37,3 +40,5 @@
     Stay in touch !
   </div>
 </div>
+
+  <!-- Trying to update my branch -->
