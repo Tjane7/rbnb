@@ -1,10 +1,8 @@
 <body style="background-color:rgb(231, 100, 13)">
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)), url(https://res.cloudinary.com/dl7jrxyit/image/upload/v1685647290/montreal-construction-orange-cones_d95op4.webp
 );">
-  <div class="container">
-    <h1><center>Choose your cone</center></h1>
-    <p><%= link_to 'Create a cone', new_cone_path, class: "btn btn-gradient" %></p>
-  </div>
+  <h1>Choose your cone</h1>
+  <%= link_to 'Create a cone', new_cone_path, class: "btn btn-gradient" %>
 </div>
 <%# <p><%= link_to 'Create a cone', new_cone_path, class: "btn btn-gradient"  %>
 <div class="cones-grid">
@@ -14,6 +12,9 @@
         <%# <%= cl_image_tag cone.photo.key, height: 100, width: 200, crop: :fill %>
       <%# <% end %>
       <div class="card-body">
+        <% if cone.photo.attached? %>
+          <%= cl_image_tag cone.photo.key %>
+        <% end %>
         <h5 class="card-title">
           <%= link_to cone_path(cone) do %>
             <%= cone.description %>
