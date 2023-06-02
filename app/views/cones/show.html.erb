@@ -65,4 +65,7 @@
 <p>Price: <%= @cone.price %></p>
 <% if @cone.photo.attached? %>
   <%= cl_image_tag cone.photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>
+ <%= link_to "Book it", booking_path, class: "btn btn-flat" %>
+ </div>
 <% end %>-->

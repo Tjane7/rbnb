@@ -3,6 +3,7 @@ Booking.destroy_all
 Cone.destroy_all
 User.destroy_all
 
+
 user = User.create!(
   email: "user@hue.com",
   password: 111111
@@ -19,20 +20,34 @@ booking_user = User.create!(
   email: "booking@hue.com",
   password: 111111
 )
+
 puts "Created new booking user"
 
+require "open-uri"
+cone_user = Cone.create!(
+  user: User.all.sample,
+  description: "Conify",
+  condition: ["Used", "New"].sample,
+  quantity: rand(0..15),
+  price: Faker::Commerce.price
+)
+  file = URI.open('https://www.trafficsupply.ca/wp-content/uploads/2016/04/16014-300x300.jpg')
+  cone.photo.attach(io: file, filename: 'cone.png', content_type: 'image/png')
 
-
-10.times do
-  cone = Cone.create!(
-    user: User.all.sample,
-    description: Faker::Company.bs,
-    condition: ["Used", "New"].sample,
-    quantity: rand(0..15),
-    price: Faker::Commerce.price
-  )
   puts "Created new cone with id #{cone.id}"
 end
+
+
+# 10.times do
+#   cone = Cone.create!(
+#     user: User.all.sample,
+#     description: Faker::Company.bs,
+#     condition: ["Used", "New"].sample,
+#     quantity: rand(0..15),
+#     price: Faker::Commerce.price
+#   )
+#   puts "Created new cone with id #{cone.id}"
+# end
 
 5.times do
   booking = Booking.create!(

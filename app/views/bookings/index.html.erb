@@ -1,9 +1,22 @@
-<% @bookings.each do |booking|  %>
-  <h4> booking </h4>
-  <p><%= booking.cone.name %></p>
-  <p><%= booking.accepted %></p>
-  <%= simple_form_for(booking) do |f| %>
-    <%= f.input :accepted, as: :radio_buttons %>
-    <%= f.submit %>
-  <% end %>
+
+<body style="background-color:rgb(231, 100, 13)">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.dblewett.com/wp-content/uploads/2021/12/05-multiple-exposure-montreal-construction.jpg);">
+  <div class="container">
+    <h1><center>Manage your bookings!</center></h1>
+  </div>
+</div>
+
+<div class="booking-cards">
+  <% @bookings.each do |booking|  %>
+    <div class="booking-card">
+      <h4><center> Booking </center></h4>
+      <p><center><%= booking.cone.name %></center></p>
+      <% booking.accepted %>
+      <%= simple_form_for(booking) do |f| %>
+        <%= f.input :accepted, as: :radio_buttons %>
+        <%= f.submit %>
+      <% end %>
+    </div>
 <% end %>
+</div>
+</body>
