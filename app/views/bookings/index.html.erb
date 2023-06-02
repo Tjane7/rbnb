@@ -1,9 +1,7 @@
 
 <body style="background-color:rgb(231, 100, 13)">
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.dblewett.com/wp-content/uploads/2021/12/05-multiple-exposure-montreal-construction.jpg);">
-  <div class="container">
-    <h1><center>Manage your bookings!</center></h1>
-  </div>
+  <h1>Manage your bookings!</h1>
 </div>
 
 <div class="booking-cards">
@@ -11,6 +9,11 @@
     <div class="booking-card">
       <h4><center> Booking </center></h4>
       <p><center><%= booking.cone.name %></center></p>
+      <%# <p><center><%= booking.cone.user_name %>
+      <% if booking.cone.photo.attached? %>
+      <%= cl_image_tag booking.cone.photo.key %>
+      <% end %>
+
       <% booking.accepted %>
       <%= simple_form_for(booking) do |f| %>
         <%= f.input :accepted, as: :radio_buttons %>
