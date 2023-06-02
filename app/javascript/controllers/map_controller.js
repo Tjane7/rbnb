@@ -24,7 +24,7 @@ export default class extends Controller {
   }
 
   #addMarkersToMap() {
-    console.log('From markersToMap');
+    // console.log('From markersToMap');
 
     this.markersValue.forEach((marker) => {
       new mapboxgl.Marker()
