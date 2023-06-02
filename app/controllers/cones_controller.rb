@@ -3,6 +3,7 @@ class ConesController < ApplicationController
   def index
     @cones = Cone.all
 
+    # for some reason this array is empty
     @markers = @cones.geocoded.map do |cone|
       {
         lat: cone.latitude,
