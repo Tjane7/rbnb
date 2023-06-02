@@ -14,14 +14,18 @@
         <%# <%= cl_image_tag cone.photo.key, height: 100, width: 200, crop: :fill %>
       <%# <% end %>
       <div class="card-body">
+        <% if cone.photo.attached? %>
+          <%= cl_image_tag cone.photo.key, class: 'cone-image' %>
+        <% end %>
         <h5 class="card-title">
-          <%= link_to cone_path(cone) do %>
             <%= cone.description %>
-          <% end %>
+
         </h5>
 
         <p class="card-text">Condition: <%= cone.condition %></p>
         <p class="card-text">Price: $<%= cone.price %></p>
+        <p class="card-text">Location: $<%= cone.location %></p>
+
 
         <%= link_to cone_path(cone), class: "btn btn-gradient" do %>
           Details

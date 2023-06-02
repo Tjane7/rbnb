@@ -14,6 +14,11 @@ class ConesController < ApplicationController
 
   def show
     @cone = Cone.find(params[:id])
+
+    @markers = [{
+      lat: @cone.latitude,
+      lng: @cone.longitude
+    }]
   end
 
   def new
