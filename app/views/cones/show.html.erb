@@ -10,17 +10,15 @@
 </div>-->
 
 
-<div class="container">
+<div class="container mt-5 mb-5">
   <div class="row">
     <div class="col-8">
       <div class="cone-show-card">
         <h1><%= @cone.name %></h1>
-        <p class="cone-show-location"><%= @cone.location %></p>
+        <p><%= @cone.description %></p>
       </div>
       <div class="cone-show-card">
-        <h3>A bit more about this cone...</h3>
-        <p><%= @cone.description %></p>
-        <div class="map"></div>
+        <div><img src="cone.png"></div>
       </div>
     </div>
 
@@ -30,11 +28,11 @@
 
         <form action="">
           <div class="input-group">
-            <span class="input-group-text" id="start-date-label">From:</span>
+            <span class="input-group-text" id="start-date-label">Start:</span>
             <input type="text" class="form-control">
           </div>
           <div class="input-group mt-2">
-            <span class="input-group-text" id="end-date-label">To:</span>
+            <span class="input-group-text" id="end-date-label">End:</span>
             <input type="text" class="form-control">
           </div>
           <input type="submit" value="Book" class="btn btn-success mt-2" style="width: 100%">
