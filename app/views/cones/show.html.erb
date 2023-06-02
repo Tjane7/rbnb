@@ -21,7 +21,13 @@
               <p><strong>Price: </strong>$<%= @cone.price %></p>
           </div>
         </div>
-          <%= link_to "BOOK NOW", new_cone_booking_path(@cone), class: "btn btn-flat"%>
+        <div>
+          <% if @cone.bookings.empty? %>
+            <%= link_to "BOOK NOW", new_cone_booking_path(@cone), class: "btn btn-flat"%>
+          <% elsif @cone.bookings.last.accepted? %>
+            <h4>BOOKED</h4>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
