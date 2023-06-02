@@ -1,16 +1,18 @@
+<body style="background-color:rgb(231, 100, 13)">
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.1)), url(https://res.cloudinary.com/dl7jrxyit/image/upload/v1685647290/montreal-construction-orange-cones_d95op4.webp
 );">
   <div class="container">
-    <h1><center>All cones!</center></h1>
+    <h1><center>Choose your cone</center></h1>
+    <p><%= link_to 'Create a cone', new_cone_path, class: "btn btn-gradient" %></p>
   </div>
 </div>
-<p><%= link_to 'Create a cone', new_cone_path %></p>
+<%# <p><%= link_to 'Create a cone', new_cone_path, class: "btn btn-gradient"  %>
 <div class="cones-grid">
   <% @cones.each do |cone| %>
-    <div class="card">
-      <% if cone.photo.attached? %>
-        <%= cl_image_tag cone.photo.key, height: 100, width: 200, crop: :fill %>
-      <% end %>
+    <div class="card" style="border-radius: 5px;">
+      <%# <% if cone.photo.attached? %>
+        <%# <%= cl_image_tag cone.photo.key, height: 100, width: 200, crop: :fill %>
+      <%# <% end %>
       <div class="card-body">
         <h5 class="card-title">
           <%= link_to cone_path(cone) do %>
@@ -21,10 +23,11 @@
         <p class="card-text">Condition: <%= cone.condition %></p>
         <p class="card-text">Price: $<%= cone.price %></p>
 
-        <%= link_to cone_path(cone), class: "btn btn-primary" do %>
+        <%= link_to cone_path(cone), class: "btn btn-gradient" do %>
           Details
         <% end %>
       </div>
     </div>
   <% end %>
 </div>
+</body>

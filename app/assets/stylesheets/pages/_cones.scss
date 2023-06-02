@@ -2,5 +2,17 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 5px;
-  border-radius: .25rem;
+  border-radius: 25 px;
+  padding: 5px;
+  margin: 20px;
+}
+
+.card {
+  border-radius: 25 px;
+
+}
+
+.card-title {
+  color :black ;
+
 }

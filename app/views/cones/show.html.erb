@@ -13,11 +13,13 @@
   </div>
 </div>
 
-
-<h2><%= @cone.description %></h2>
+<div class="cone-card">
+<h2><center><%= @cone.description %></center></h2>
 <p>Condition: <%= @cone.condition %></p>
 <p>Quantity: <%= @cone.quantity %></p>
 <p>Price: <%= @cone.price %></p>
 <% if @cone.photo.attached? %>
   <%= cl_image_tag cone.photo.key, height: 300, width: 400, crop: :fill %>
 <% end %>
+ <%= link_to "Book it", booking_path, class: "btn btn-flat" %>
+ </div>
